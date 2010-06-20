@@ -78,6 +78,7 @@ Public Class CDGFile
   End Property
 
 #End Region
+
 #Region "Public Methods"
 
   'Png Export
