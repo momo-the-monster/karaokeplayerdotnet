@@ -16,7 +16,7 @@ Public Class Form1
   Private mMP3FileName As String
   Private mTempDir As String
   Private mMP3Stream As Integer
-  Private mCDGWindow As New CDGWindow
+  Private WithEvents mCDGWindow As New CDGWindow
 
   Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btBrowse.Click
     OpenFileDialog1.Filter = "CDG or Zip Files (*.zip, *.cdg)|*.zip;*.cdg"
@@ -25,7 +25,7 @@ Public Class Form1
   End Sub
 
   Private Sub PlayMP3Bass(ByVal mp3FileName As String)
-    If Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero) Then
+    If Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, Me.Handle) Then
       mMP3Stream = 0
       mMP3Stream = Bass.BASS_StreamCreateFile(mp3FileName, 0, 0, BASSFlag.BASS_STREAM_DECODE Or BASSFlag.BASS_SAMPLE_FLOAT Or BASSFlag.BASS_STREAM_PRESCAN)
       mMP3Stream = AddOn.Fx.BassFx.BASS_FX_TempoCreate(mMP3Stream, BASSFlag.BASS_FX_FREESOURCE Or BASSFlag.BASS_SAMPLE_FLOAT Or BASSFlag.BASS_SAMPLE_LOOP)
@@ -52,8 +52,7 @@ Public Class Form1
     'PictureBox1.Image = Nothing
     HideCDGWindow()
     StopPlaybackBass()
-    mCDGFile.close()
-    mCDGStream.close()
+    mCDGFile.Dispose()
     CleanUp()
   End Sub
 
@@ -76,8 +75,6 @@ Public Class Form1
 
   Private Sub Form1_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
     StopPlayback()
-    mCDGFile = Nothing
-    mCDGStream = Nothing
   End Sub
 
   Private Sub tsbPlay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbPlay.Click
@@ -94,11 +91,7 @@ Public Class Form1
       mPaused = False
       mStop = False
       mFrameCount = 0
-      mCDGStream = New CdgFileIoStream
-      mCDGStream.open(mCDGFileName)
-      mCDGFile = New CDGFile
-      Dim mySurface As New ISurface
-      mCDGFile.open(mCDGStream, mySurface)
+      mCDGFile = New CDGFile(mCDGFileName)
       Dim cdgLength As Long = mCDGFile.getTotalDuration
       PlayMP3Bass(mMP3FileName)
       Dim startTime As DateTime = Now
@@ -148,6 +141,24 @@ Public Class Form1
 
   End Sub
 
+  Private Sub OutputToWMA()
+    Dim _encBuffer(65535) As Byte
+    'create the encoder...
+    Dim _encHandle As Integer = AddOn.Wma.BassWma.BASS_WMA_EncodeOpenFile(44100, 2, AddOn.Wma.BASSWMAEncode.BASS_WMA_ENCODE_DEFAULT, 192, mMP3FileName & ".wma")
+    'create the stream
+    Dim _stream As Integer = Bass.BASS_StreamCreateFile(mMP3FileName, 0, 0, BASSFlag.BASS_STREAM_DECODE)
+    'encode the data
+    While (Bass.BASS_ChannelIsActive(_stream) = BASSActive.BASS_ACTIVE_PLAYING)
+      'get the decoded sample data
+      Dim len As Integer = Bass.BASS_ChannelGetData(_stream, _encBuffer, 65536)
+      'write the data to the encoder
+      AddOn.Wma.BassWma.BASS_WMA_EncodeWrite(_encHandle, _encBuffer, len)
+    End While
+    'finish
+    AddOn.Wma.BassWma.BASS_WMA_EncodeClose(_encHandle)
+    Bass.BASS_StreamFree(_stream)
+  End Sub
+
   Private Sub PreProcessFiles()
     Dim myCDGFileName As String = ""
     If Regex.IsMatch(tbFileName.Text, "\.zip$") Then
@@ -175,6 +186,7 @@ PairUpFiles:
       Catch ex As Exception
       End Try
     End If
+    mTempDir = ""
   End Sub
 
   Private Sub AdjustPitch()
@@ -195,5 +207,41 @@ PairUpFiles:
 
   Private Sub nudKey_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nudKey.ValueChanged
     AdjustPitch()
+  End Sub
+
+  Private Sub btAVI_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAVI.Click
+    Try
+      StopPlayback()
+    Catch ex As Exception
+      'Do nothing for now
+    End Try
+    Try
+      PreProcessFiles()
+      If mCDGFileName = "" Or mMP3FileName = "" Then
+        MsgBox("Cannot find a CDG and MP3 file to play together.")
+        StopPlayback()
+        Exit Sub
+      End If
+    Catch ex As Exception
+      'Do nothing for now
+    End Try
+    Dim myExportAVI As New ExportToAVI(mCDGFileName, mMP3FileName)
+    myExportAVI.ShowDialog()
+    myExportAVI.Dispose()
+    Try
+      CleanUp()
+    Catch ex As Exception
+      'Do nothing for now
+    End Try
+  End Sub
+
+  Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+  End Sub
+
+  Private Sub mCDGWindow_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles mCDGWindow.FormClosing
+    StopPlayback()
+    mCDGWindow.Hide()
+    e.Cancel = True
   End Sub
 End Class

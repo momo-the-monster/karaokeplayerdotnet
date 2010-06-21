@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Public Class CDGFile
+  Implements IDisposable
 
 
 #Region "Constants"
@@ -86,29 +87,15 @@ Public Class CDGFile
     RGBImage.Save(filename, System.Drawing.Imaging.ImageFormat.Png)
   End Sub
 
-
-  'Open CDG file
-
-  Public Function open(ByRef pStream As CdgFileIoStream, ByRef pSurface As ISurface) As Boolean
-    m_pStream = pStream
-    m_pSurface = pSurface
-
-    If m_pStream Is Nothing Then Return False
-    If m_pSurface Is Nothing Then Return False
-
-    Me.reset()
-
-    m_duration = ((m_pStream.getsize() / CDG_PACKET_SIZE) * 1000) / 300
-
-    Return True
-
-  End Function
-
-  'Close currently open file
-
-  Public Sub close()
-    m_pStream = Nothing
-    m_pSurface = Nothing
+  'New
+  Public Sub New(ByVal cdgFileName As String)
+    m_pStream = New CdgFileIoStream
+    m_pStream.open(cdgFileName)
+    m_pSurface = New ISurface
+    If m_pStream IsNot Nothing AndAlso m_pSurface IsNot Nothing Then
+      Me.reset()
+      m_duration = ((m_pStream.getsize() / CDG_PACKET_SIZE) * 1000) / 300
+    End If
   End Sub
 
   Public Function getTotalDuration() As Long
@@ -532,6 +519,29 @@ Public Class CDGFile
 
   End Sub
 
+#End Region
+
+  Private disposedValue As Boolean = False    ' To detect redundant calls
+
+  ' IDisposable
+  Protected Overridable Sub Dispose(ByVal disposing As Boolean)
+    If Not Me.disposedValue Then
+      If disposing Then
+        m_pStream.close()
+      End If
+      m_pStream = Nothing
+      m_pSurface = Nothing
+    End If
+    Me.disposedValue = True
+  End Sub
+
+#Region " IDisposable Support "
+  ' This code added by Visual Basic to correctly implement the disposable pattern.
+  Public Sub Dispose() Implements IDisposable.Dispose
+    ' Do not change this code.  Put cleanup code in Dispose(ByVal disposing As Boolean) above.
+    Dispose(True)
+    GC.SuppressFinalize(Me)
+  End Sub
 #End Region
 
 End Class
