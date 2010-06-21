@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MP3GPlayer", "MP3GPlayer.vbproj", "{731996CE-0306-4678-9AF9-89BF30176A00}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MP3G Player Installer", "..\MP3G PLayer Installer\MP3G PLayer Installer.vdproj", "{C57782BE-5E90-493B-8B54-1F7BC6514603}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MP3G Player Installer", "MP3G Player Installer\MP3G PLayer Installer.vdproj", "{2990E57C-9726-490B-9321-66C13CBB87EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +15,10 @@ Global
 		{731996CE-0306-4678-9AF9-89BF30176A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731996CE-0306-4678-9AF9-89BF30176A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731996CE-0306-4678-9AF9-89BF30176A00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C57782BE-5E90-493B-8B54-1F7BC6514603}.Debug|Any CPU.ActiveCfg = Debug
-		{C57782BE-5E90-493B-8B54-1F7BC6514603}.Release|Any CPU.ActiveCfg = Release
+		{2990E57C-9726-490B-9321-66C13CBB87EF}.Debug|Any CPU.ActiveCfg = Debug
+		{2990E57C-9726-490B-9321-66C13CBB87EF}.Debug|Any CPU.Build.0 = Debug
+		{2990E57C-9726-490B-9321-66C13CBB87EF}.Release|Any CPU.ActiveCfg = Release
+		{2990E57C-9726-490B-9321-66C13CBB87EF}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
