@@ -19,4 +19,12 @@
       Me.Refresh()
     End If
   End Sub
+
+  Private Sub CDGWindow_SizeChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.SizeChanged
+    If Me.WindowState = FormWindowState.Maximized Then
+      Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+    Else
+      Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
+    End If
+  End Sub
 End Class

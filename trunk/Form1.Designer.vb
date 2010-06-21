@@ -29,6 +29,7 @@ Partial Class Form1
     Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
     Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
     Me.Panel1 = New System.Windows.Forms.Panel
+    Me.btAVI = New System.Windows.Forms.Button
     Me.Label2 = New System.Windows.Forms.Label
     Me.nudKey = New System.Windows.Forms.NumericUpDown
     Me.Label1 = New System.Windows.Forms.Label
@@ -49,12 +50,12 @@ Partial Class Form1
     Me.tbFileName.Location = New System.Drawing.Point(3, 5)
     Me.tbFileName.Name = "tbFileName"
     Me.tbFileName.ReadOnly = True
-    Me.tbFileName.Size = New System.Drawing.Size(229, 20)
+    Me.tbFileName.Size = New System.Drawing.Size(309, 20)
     Me.tbFileName.TabIndex = 0
     '
     'btBrowse
     '
-    Me.btBrowse.Location = New System.Drawing.Point(247, 3)
+    Me.btBrowse.Location = New System.Drawing.Point(318, 6)
     Me.btBrowse.Name = "btBrowse"
     Me.btBrowse.Size = New System.Drawing.Size(75, 23)
     Me.btBrowse.TabIndex = 1
@@ -71,6 +72,7 @@ Partial Class Form1
     '
     'Panel1
     '
+    Me.Panel1.Controls.Add(Me.btAVI)
     Me.Panel1.Controls.Add(Me.Label2)
     Me.Panel1.Controls.Add(Me.nudKey)
     Me.Panel1.Controls.Add(Me.Label1)
@@ -81,8 +83,17 @@ Partial Class Form1
     Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel1.Location = New System.Drawing.Point(0, 0)
     Me.Panel1.Name = "Panel1"
-    Me.Panel1.Size = New System.Drawing.Size(331, 105)
+    Me.Panel1.Size = New System.Drawing.Size(397, 105)
     Me.Panel1.TabIndex = 3
+    '
+    'btAVI
+    '
+    Me.btAVI.Location = New System.Drawing.Point(336, 34)
+    Me.btAVI.Name = "btAVI"
+    Me.btAVI.Size = New System.Drawing.Size(57, 23)
+    Me.btAVI.TabIndex = 10
+    Me.btAVI.Text = "--> AVI"
+    Me.btAVI.UseVisualStyleBackColor = True
     '
     'Label2
     '
@@ -164,14 +175,14 @@ Partial Class Form1
     Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
     Me.Panel2.Location = New System.Drawing.Point(0, 105)
     Me.Panel2.Name = "Panel2"
-    Me.Panel2.Size = New System.Drawing.Size(331, 0)
+    Me.Panel2.Size = New System.Drawing.Size(397, 0)
     Me.Panel2.TabIndex = 4
     '
     'Form1
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    Me.ClientSize = New System.Drawing.Size(331, 61)
+    Me.ClientSize = New System.Drawing.Size(397, 58)
     Me.Controls.Add(Me.Panel2)
     Me.Controls.Add(Me.Panel1)
     Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -200,5 +211,6 @@ Partial Class Form1
   Friend WithEvents trbVolume As System.Windows.Forms.TrackBar
   Friend WithEvents Label2 As System.Windows.Forms.Label
   Friend WithEvents nudKey As System.Windows.Forms.NumericUpDown
+  Friend WithEvents btAVI As System.Windows.Forms.Button
 
 End Class

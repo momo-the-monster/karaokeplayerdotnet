@@ -43,7 +43,6 @@ Partial Class CDGWindow
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
     Me.BackColor = System.Drawing.Color.Black
     Me.ClientSize = New System.Drawing.Size(300, 216)
-    Me.ControlBox = False
     Me.Controls.Add(Me.PictureBox1)
     Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
     Me.KeyPreview = True
