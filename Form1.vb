@@ -244,4 +244,5 @@ PairUpFiles:
     mCDGWindow.Hide()
     e.Cancel = True
   End Sub
+
 End Class
