@@ -138,14 +138,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="karaoke.ico" />
+    <EmbeddedResource Include="karaoke.ico" />
     <Content Include="lib\AviFile.dll" />
     <Content Include="lib\bass.dll" />
     <Content Include="lib\Bass.Net.dll" />
     <Content Include="lib\bass_fx.dll" />
     <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
     <Content Include="lib\mencoder.exe" />
-    <Content Include="resources\rsfire.ico" />
+    <EmbeddedResource Include="resources\rsfire.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

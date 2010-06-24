@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_369EEC4094E64E999FF01DDF18590591"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
         "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
         "MsmSig" = "8:_UNDEFINED"
@@ -58,12 +64,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CBFEC95040AB9F2A398345232D4EE6F5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -77,6 +77,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6F90881564628FD74EF66BBF9899F217"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CBFEC95040AB9F2A398345232D4EE6F5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -104,6 +110,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5"
+                    {
+                    "Name" = "8:.NET Framework 3.5"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -128,6 +147,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5"
+                    {
+                    "Name" = "8:.NET Framework 3.5"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -182,6 +214,26 @@
             {
             "SourcePath" = "8:..\\lib\\bass_fx.dll"
             "TargetName" = "8:bass_fx.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_369EEC4094E64E999FF01DDF18590591"
+            {
+            "SourcePath" = "8:..\\resources\\karaoke.ico"
+            "TargetName" = "8:karaoke.ico"
             "Tag" = "8:"
             "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
             "Condition" = "8:"
@@ -368,7 +420,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MP3+CDG Player"
         "ProductCode" = "8:{984FFFA0-B66F-4E2F-B62D-E9C96A13F92D}"
-        "PackageCode" = "8:{D775C6E0-527C-4135-9F0B-CDD30FF8AB6C}"
+        "PackageCode" = "8:{02BBCF7F-CEEE-427F-BCA3-A90FD64960AE}"
         "UpgradeCode" = "8:{333101F4-CB27-42E7-8FD2-017A54726E8D}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
@@ -498,7 +550,7 @@
             "Target" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
             "Folder" = "8:_F9AC7DFF9AF748588B6180B2B05B282D"
             "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Icon" = "8:"
+            "Icon" = "8:_369EEC4094E64E999FF01DDF18590591"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C961BE2D109940A485150765F745B1CA"
@@ -512,7 +564,7 @@
             "Target" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
             "Folder" = "8:_73EB5940F6AE4C3ABA6EAE3B6ED1897A"
             "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Icon" = "8:"
+            "Icon" = "8:_369EEC4094E64E999FF01DDF18590591"
             "Feature" = "8:"
             }
         }
