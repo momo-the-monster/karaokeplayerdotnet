@@ -62,18 +62,21 @@ Public Class CDGFile
 
   Public ReadOnly Property RGBImage() As System.Drawing.Image
     Get
-      mImage = New Bitmap(CDG_FULL_WIDTH, CDG_FULL_HEIGHT)
+      Dim temp As New MemoryStream
       Try
+        Dim i As Integer = 0
         For ri = 0 To CDG_FULL_HEIGHT - 1
           For ci = 0 To CDG_FULL_WIDTH - 1
             Dim ARGBInt As Integer = m_pSurface.rgbData(ri, ci)
-            mImage.SetPixel(ci, ri, Color.FromArgb(ARGBInt))
+            Dim myByte(3) As Byte
+            myByte = BitConverter.GetBytes(ARGBInt)
+            temp.Write(myByte, 0, 4)
           Next
         Next
       Catch ex As Exception
         'Do nothing (empty bitmap will be returned)
       End Try
-      Return mImage
+      Return GraphicUtil.StreamToBitmap(temp, CDG_FULL_WIDTH, CDG_FULL_HEIGHT)
     End Get
 
   End Property

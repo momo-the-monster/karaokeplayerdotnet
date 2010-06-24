@@ -182,7 +182,7 @@ Partial Class Form1
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    Me.ClientSize = New System.Drawing.Size(397, 58)
+    Me.ClientSize = New System.Drawing.Size(397, 61)
     Me.Controls.Add(Me.Panel2)
     Me.Controls.Add(Me.Panel1)
     Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

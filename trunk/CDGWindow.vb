@@ -12,10 +12,12 @@
     If Me.WindowState = FormWindowState.Normal Then
       Me.WindowState = FormWindowState.Maximized
       Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+      Me.TopMost = True
       Me.Refresh()
     Else
       Me.WindowState = FormWindowState.Normal
       Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
+      Me.TopMost = False
       Me.Refresh()
     End If
   End Sub
@@ -23,8 +25,10 @@
   Private Sub CDGWindow_SizeChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.SizeChanged
     If Me.WindowState = FormWindowState.Maximized Then
       Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+      Me.TopMost = True
     Else
       Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
+      Me.TopMost = False
     End If
   End Sub
 End Class
