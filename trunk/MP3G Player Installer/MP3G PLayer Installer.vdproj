@@ -15,56 +15,98 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_10F11D8BA6674FF8BFA736CBFC5FDA72"
+        "MsmKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_268596DD50CC483888559004FE2E12A1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_369EEC4094E64E999FF01DDF18590591"
+        "MsmKey" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
-        "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6F90881564628FD74EF66BBF9899F217"
-        "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CBFEC95040AB9F2A398345232D4EE6F5"
-        "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
+        "MsmKey" = "8:_8CB67D9EB4484AED99843313E1EF0427"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D000F036B7594153BD45680A74005E4D"
+        "MsmKey" = "8:_946C94EE184049219E8AE2147B56D8C8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A7DB376BB83446D8BBD0730405725D9B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
+        "OwnerKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -77,12 +119,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6F90881564628FD74EF66BBF9899F217"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CBFEC95040AB9F2A398345232D4EE6F5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -190,47 +226,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_10F11D8BA6674FF8BFA736CBFC5FDA72"
-            {
-            "SourcePath" = "8:..\\lib\\bass.dll"
-            "TargetName" = "8:bass.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_268596DD50CC483888559004FE2E12A1"
-            {
-            "SourcePath" = "8:..\\lib\\bass_fx.dll"
-            "TargetName" = "8:bass_fx.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_369EEC4094E64E999FF01DDF18590591"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
             {
             "SourcePath" = "8:..\\resources\\karaoke.ico"
             "TargetName" = "8:karaoke.ico"
@@ -312,14 +308,54 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CBFEC95040AB9F2A398345232D4EE6F5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8CB67D9EB4484AED99843313E1EF0427"
+            {
+            "SourcePath" = "8:..\\MP3+CDG To Video Converter\\lib\\mencoder.exe"
+            "TargetName" = "8:mencoder.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_946C94EE184049219E8AE2147B56D8C8"
+            {
+            "SourcePath" = "8:..\\lib\\bass.dll"
+            "TargetName" = "8:bass.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:AviFile, Version=1.0.3823.11378, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CBFEC95040AB9F2A398345232D4EE6F5"
+                    "_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
                     {
                     "Name" = "8:AviFile.dll"
                     "Attributes" = "3:512"
@@ -343,10 +379,41 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D000F036B7594153BD45680A74005E4D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9A54FBF88E09416F155A9852276CB4E2"
             {
-            "SourcePath" = "8:..\\lib\\mencoder.exe"
-            "TargetName" = "8:mencoder.exe"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CDGNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9A54FBF88E09416F155A9852276CB4E2"
+                    {
+                    "Name" = "8:CDGNet.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CDGNet.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7DB376BB83446D8BBD0730405725D9B"
+            {
+            "SourcePath" = "8:..\\lib\\bass_fx.dll"
+            "TargetName" = "8:bass_fx.dll"
             "Tag" = "8:"
             "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
             "Condition" = "8:"
@@ -420,10 +487,10 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MP3+CDG Player"
         "ProductCode" = "8:{984FFFA0-B66F-4E2F-B62D-E9C96A13F92D}"
-        "PackageCode" = "8:{02BBCF7F-CEEE-427F-BCA3-A90FD64960AE}"
+        "PackageCode" = "8:{022D03BC-81D5-4D46-B301-62B296ED06FB}"
         "UpgradeCode" = "8:{333101F4-CB27-42E7-8FD2-017A54726E8D}"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
@@ -539,32 +606,60 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A5F6C2B574BE42B7824D894EB6173CE5"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7597C9C4FE154EA19181A2E164D5D892"
             {
-            "Name" = "8:MP3+CDG Player"
+            "Name" = "8:MP3+CDG To Video Converter"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
-            "Folder" = "8:_F9AC7DFF9AF748588B6180B2B05B282D"
-            "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Icon" = "8:_369EEC4094E64E999FF01DDF18590591"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C961BE2D109940A485150765F745B1CA"
-            {
-            "Name" = "8:MP3+CDG Player"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_18C9F9F7C2714BBC98FDF96F6B09389A"
+            "Target" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
             "Folder" = "8:_73EB5940F6AE4C3ABA6EAE3B6ED1897A"
             "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Icon" = "8:_369EEC4094E64E999FF01DDF18590591"
+            "Icon" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8EA674B37D134A79BD64F838C6716AEC"
+            {
+            "Name" = "8:MP3+CDG Player"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+            "Folder" = "8:_73EB5940F6AE4C3ABA6EAE3B6ED1897A"
+            "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Icon" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9FCC825F03004780B56AE09FCB346CE6"
+            {
+            "Name" = "8:MP3+CDG Player"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+            "Folder" = "8:_F9AC7DFF9AF748588B6180B2B05B282D"
+            "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Icon" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E64268EBEAA1448ABB39178BF4B24D50"
+            {
+            "Name" = "8:MP3+CDG To Video Converter"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+            "Folder" = "8:_F9AC7DFF9AF748588B6180B2B05B282D"
+            "WorkingFolder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Icon" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
             "Feature" = "8:"
             }
         }
@@ -966,7 +1061,35 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_18C9F9F7C2714BBC98FDF96F6B09389A"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3012C3CF1B38485C82F4CB2EFABB781F"
+            {
+            "SourcePath" = "8:..\\MP3+CDG To Video Converter\\obj\\Release\\MP3+CDG To Video Converter.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{66B31658-8CB5-4843-ABA9-9465B7560029}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
             {
             "SourcePath" = "8:..\\obj\\Release\\MP3GPlayer.exe"
             "TargetName" = "8:"

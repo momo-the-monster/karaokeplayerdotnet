@@ -3,8 +3,11 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 Imports System.IO
 Imports Un4seen.Bass
+Imports CDGNet
 
 Public Class Form1
+
+#Region "Private Declarations"
 
   Private mCDGFile As CDGFile
   Private mCDGStream As CdgFileIoStream
@@ -17,15 +20,80 @@ Public Class Form1
   Private mTempDir As String
   Private mMP3Stream As Integer
   Private WithEvents mCDGWindow As New CDGWindow
+  Private mBassInitalized As Boolean = False
+
+#End Region
+
+#Region "Control Events"
+
+  Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    'Add registration key here if you have a license
+    'BassNet.Registration("email@domain.com", "0000000000000000")
+    Try
+      Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, Me.Handle)
+      mBassInitalized = True
+    Catch ex As Exception
+      MsgBox("Unable to initialize the audio playback system.")
+    End Try
+  End Sub
 
   Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btBrowse.Click
-    OpenFileDialog1.Filter = "CDG or Zip Files (*.zip, *.cdg)|*.zip;*.cdg"
-    OpenFileDialog1.ShowDialog()
-    tbFileName.Text = OpenFileDialog1.FileName
+    BrowseCDGZip()
+  End Sub
+
+  Private Sub Form1_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+    StopPlayback()
+  End Sub
+
+  Private Sub tsbPlay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbPlay.Click
+    Play()
+  End Sub
+
+  Private Sub tsbStop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbStop.Click
+    Try
+      StopPlayback()
+    Catch ex As Exception
+      'Do nothing for now
+    End Try
+  End Sub
+
+  Private Sub tsbPause_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbPause.Click
+    Pause()
+  End Sub
+
+  Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles trbVolume.Scroll
+    AdjustVolume()
+  End Sub
+
+  Private Sub nudKey_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nudKey.ValueChanged
+    AdjustPitch()
+  End Sub
+
+  Private Sub mCDGWindow_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles mCDGWindow.FormClosing
+    StopPlayback()
+    mCDGWindow.Hide()
+    e.Cancel = True
+  End Sub
+
+#End Region
+
+#Region "CDG + MP3 Playback Operations"
+
+  Private Sub Pause()
+    mPaused = Not mPaused
+    If mMP3Stream <> 0 Then
+      If Bass.BASS_ChannelIsActive(mMP3Stream) <> BASSActive.BASS_ACTIVE_PLAYING Then
+        Bass.BASS_ChannelPlay(mMP3Stream, False)
+        tsbPause.Text = "Pause"
+      Else
+        Bass.BASS_ChannelPause(mMP3Stream)
+        tsbPause.Text = "Resume"
+      End If
+    End If
   End Sub
 
   Private Sub PlayMP3Bass(ByVal mp3FileName As String)
-    If Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, Me.Handle) Then
+    If mBassInitalized OrElse Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, Me.Handle) Then
       mMP3Stream = 0
       mMP3Stream = Bass.BASS_StreamCreateFile(mp3FileName, 0, 0, BASSFlag.BASS_STREAM_DECODE Or BASSFlag.BASS_SAMPLE_FLOAT Or BASSFlag.BASS_STREAM_PRESCAN)
       mMP3Stream = AddOn.Fx.BassFx.BASS_FX_TempoCreate(mMP3Stream, BASSFlag.BASS_FX_FREESOURCE Or BASSFlag.BASS_SAMPLE_FLOAT Or BASSFlag.BASS_SAMPLE_LOOP)
@@ -45,11 +113,11 @@ Public Class Form1
     Bass.BASS_StreamFree(mMP3Stream)
     Bass.BASS_Free()
     mMP3Stream = 0
+    mBassInitalized = False
   End Sub
 
   Private Sub StopPlayback()
     mStop = True
-    'PictureBox1.Image = Nothing
     HideCDGWindow()
     StopPlaybackBass()
     mCDGFile.Dispose()
@@ -64,20 +132,7 @@ Public Class Form1
     Bass.BASS_Pause()
   End Sub
 
-  Private Sub ShowCDGWindow()
-    mCDGWindow.Show()
-  End Sub
-
-  Private Sub HideCDGWindow()
-    mCDGWindow.PictureBox1.Image = Nothing
-    mCDGWindow.Hide()
-  End Sub
-
-  Private Sub Form1_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-    StopPlayback()
-  End Sub
-
-  Private Sub tsbPlay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbPlay.Click
+  Private Sub Play()
     Try
       If mMP3Stream <> 0 AndAlso Bass.BASS_ChannelIsActive(mMP3Stream) = BASSActive.BASS_ACTIVE_PLAYING Then
         StopPlayback()
@@ -110,6 +165,7 @@ Public Class Form1
         mCDGFile.renderAtPosition(pos)
         mFrameCount += 1
         mCDGWindow.PictureBox1.Image = mCDGFile.RGBImage
+        mCDGWindow.PictureBox1.BackColor = CType(mCDGFile.RGBImage, Bitmap).GetPixel(1, 1)
         mCDGWindow.PictureBox1.Refresh()
         Dim myFrameRate As Single = Math.Round(mFrameCount / (pos / 1000), 1)
         Application.DoEvents()
@@ -119,44 +175,26 @@ Public Class Form1
     End Try
   End Sub
 
-  Private Sub tsbStop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbStop.Click
-    Try
-      StopPlayback()
-    Catch ex As Exception
-      'Do nothing for now
-    End Try
-  End Sub
-
-  Private Sub tsbPause_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsbPause.Click
-    mPaused = Not mPaused
+  Private Sub AdjustPitch()
     If mMP3Stream <> 0 Then
-      If Bass.BASS_ChannelIsActive(mMP3Stream) <> BASSActive.BASS_ACTIVE_PLAYING Then
-        Bass.BASS_ChannelPlay(mMP3Stream, False)
-        tsbPause.Text = "Pause"
-      Else
-        Bass.BASS_ChannelPause(mMP3Stream)
-        tsbPause.Text = "Resume"
-      End If
+      Bass.BASS_ChannelSetAttribute(mMP3Stream, BASSAttribute.BASS_ATTRIB_TEMPO_PITCH, nudKey.Value)
     End If
-
   End Sub
 
-  Private Sub OutputToWMA()
-    Dim _encBuffer(65535) As Byte
-    'create the encoder...
-    Dim _encHandle As Integer = AddOn.Wma.BassWma.BASS_WMA_EncodeOpenFile(44100, 2, AddOn.Wma.BASSWMAEncode.BASS_WMA_ENCODE_DEFAULT, 192, mMP3FileName & ".wma")
-    'create the stream
-    Dim _stream As Integer = Bass.BASS_StreamCreateFile(mMP3FileName, 0, 0, BASSFlag.BASS_STREAM_DECODE)
-    'encode the data
-    While (Bass.BASS_ChannelIsActive(_stream) = BASSActive.BASS_ACTIVE_PLAYING)
-      'get the decoded sample data
-      Dim len As Integer = Bass.BASS_ChannelGetData(_stream, _encBuffer, 65536)
-      'write the data to the encoder
-      AddOn.Wma.BassWma.BASS_WMA_EncodeWrite(_encHandle, _encBuffer, len)
-    End While
-    'finish
-    AddOn.Wma.BassWma.BASS_WMA_EncodeClose(_encHandle)
-    Bass.BASS_StreamFree(_stream)
+  Private Sub AdjustVolume()
+    If mMP3Stream <> 0 Then
+      Bass.BASS_ChannelSetAttribute(mMP3Stream, BASSAttribute.BASS_ATTRIB_VOL, If(trbVolume.Value = 0, 0, (trbVolume.Value / 100)))
+    End If
+  End Sub
+
+#End Region
+
+#Region "File Access"
+
+  Private Sub BrowseCDGZip()
+    OpenFileDialog1.Filter = "CDG or Zip Files (*.zip, *.cdg)|*.zip;*.cdg"
+    OpenFileDialog1.ShowDialog()
+    tbFileName.Text = OpenFileDialog1.FileName
   End Sub
 
   Private Sub PreProcessFiles()
@@ -189,60 +227,40 @@ PairUpFiles:
     mTempDir = ""
   End Sub
 
-  Private Sub AdjustPitch()
-    If mMP3Stream <> 0 Then
-      Bass.BASS_ChannelSetAttribute(mMP3Stream, BASSAttribute.BASS_ATTRIB_TEMPO_PITCH, nudKey.Value)
-    End If
+#End Region
+
+#Region "CDG Graphics Window"
+
+  Private Sub ShowCDGWindow()
+    mCDGWindow.Show()
   End Sub
 
-  Private Sub AdjustVolume()
-    If mMP3Stream <> 0 Then
-      Bass.BASS_ChannelSetAttribute(mMP3Stream, BASSAttribute.BASS_ATTRIB_VOL, If(trbVolume.Value = 0, 0, (trbVolume.Value / 100)))
-    End If
-  End Sub
-
-  Private Sub TrackBar1_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles trbVolume.Scroll
-    AdjustVolume()
-  End Sub
-
-  Private Sub nudKey_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nudKey.ValueChanged
-    AdjustPitch()
-  End Sub
-
-  Private Sub btAVI_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btAVI.Click
-    Try
-      StopPlayback()
-    Catch ex As Exception
-      'Do nothing for now
-    End Try
-    Try
-      PreProcessFiles()
-      If mCDGFileName = "" Or mMP3FileName = "" Then
-        MsgBox("Cannot find a CDG and MP3 file to play together.")
-        StopPlayback()
-        Exit Sub
-      End If
-    Catch ex As Exception
-      'Do nothing for now
-    End Try
-    Dim myExportAVI As New ExportToAVI(mCDGFileName, mMP3FileName)
-    myExportAVI.ShowDialog()
-    myExportAVI.Dispose()
-    Try
-      CleanUp()
-    Catch ex As Exception
-      'Do nothing for now
-    End Try
-  End Sub
-
-  Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-  End Sub
-
-  Private Sub mCDGWindow_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles mCDGWindow.FormClosing
-    StopPlayback()
+  Private Sub HideCDGWindow()
+    mCDGWindow.PictureBox1.Image = Nothing
     mCDGWindow.Hide()
-    e.Cancel = True
   End Sub
+
+#End Region
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
 
 End Class

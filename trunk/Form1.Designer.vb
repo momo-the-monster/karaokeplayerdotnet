@@ -29,7 +29,6 @@ Partial Class Form1
     Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
     Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
     Me.Panel1 = New System.Windows.Forms.Panel
-    Me.btAVI = New System.Windows.Forms.Button
     Me.Label2 = New System.Windows.Forms.Label
     Me.nudKey = New System.Windows.Forms.NumericUpDown
     Me.Label1 = New System.Windows.Forms.Label
@@ -72,7 +71,6 @@ Partial Class Form1
     '
     'Panel1
     '
-    Me.Panel1.Controls.Add(Me.btAVI)
     Me.Panel1.Controls.Add(Me.Label2)
     Me.Panel1.Controls.Add(Me.nudKey)
     Me.Panel1.Controls.Add(Me.Label1)
@@ -83,22 +81,13 @@ Partial Class Form1
     Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
     Me.Panel1.Location = New System.Drawing.Point(0, 0)
     Me.Panel1.Name = "Panel1"
-    Me.Panel1.Size = New System.Drawing.Size(397, 105)
+    Me.Panel1.Size = New System.Drawing.Size(397, 61)
     Me.Panel1.TabIndex = 3
-    '
-    'btAVI
-    '
-    Me.btAVI.Location = New System.Drawing.Point(336, 34)
-    Me.btAVI.Name = "btAVI"
-    Me.btAVI.Size = New System.Drawing.Size(57, 23)
-    Me.btAVI.TabIndex = 10
-    Me.btAVI.Text = "--> AVI"
-    Me.btAVI.UseVisualStyleBackColor = True
     '
     'Label2
     '
     Me.Label2.AutoSize = True
-    Me.Label2.Location = New System.Drawing.Point(241, 37)
+    Me.Label2.Location = New System.Drawing.Point(230, 37)
     Me.Label2.Name = "Label2"
     Me.Label2.Size = New System.Drawing.Size(25, 13)
     Me.Label2.TabIndex = 9
@@ -106,7 +95,7 @@ Partial Class Form1
     '
     'nudKey
     '
-    Me.nudKey.Location = New System.Drawing.Point(272, 35)
+    Me.nudKey.Location = New System.Drawing.Point(261, 35)
     Me.nudKey.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
     Me.nudKey.Minimum = New Decimal(New Integer() {12, 0, 0, -2147483648})
     Me.nudKey.Name = "nudKey"
@@ -173,7 +162,7 @@ Partial Class Form1
     'Panel2
     '
     Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.Panel2.Location = New System.Drawing.Point(0, 105)
+    Me.Panel2.Location = New System.Drawing.Point(0, 61)
     Me.Panel2.Name = "Panel2"
     Me.Panel2.Size = New System.Drawing.Size(397, 0)
     Me.Panel2.TabIndex = 4
@@ -211,6 +200,5 @@ Partial Class Form1
   Friend WithEvents trbVolume As System.Windows.Forms.TrackBar
   Friend WithEvents Label2 As System.Windows.Forms.Label
   Friend WithEvents nudKey As System.Windows.Forms.NumericUpDown
-  Friend WithEvents btAVI As System.Windows.Forms.Button
 
 End Class
