@@ -5,6 +5,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MP3GPlayer", "MP3GPlayer.vb
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MP3G Player Installer", "MP3G Player Installer\MP3G PLayer Installer.vdproj", "{2990E57C-9726-490B-9321-66C13CBB87EF}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CDGNet", "CDGNet\CDGNet.vbproj", "{1A466A65-6F1D-465B-A7CB-79B69F76F2D0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MP3+CDG To Video Converter", "MP3+CDG To Video Converter\MP3+CDG To Video Converter.vbproj", "{66B31658-8CB5-4843-ABA9-9465B7560029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{2990E57C-9726-490B-9321-66C13CBB87EF}.Debug|Any CPU.Build.0 = Debug
 		{2990E57C-9726-490B-9321-66C13CBB87EF}.Release|Any CPU.ActiveCfg = Release
 		{2990E57C-9726-490B-9321-66C13CBB87EF}.Release|Any CPU.Build.0 = Release
+		{1A466A65-6F1D-465B-A7CB-79B69F76F2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A466A65-6F1D-465B-A7CB-79B69F76F2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A466A65-6F1D-465B-A7CB-79B69F76F2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A466A65-6F1D-465B-A7CB-79B69F76F2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B31658-8CB5-4843-ABA9-9465B7560029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B31658-8CB5-4843-ABA9-9465B7560029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B31658-8CB5-4843-ABA9-9465B7560029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B31658-8CB5-4843-ABA9-9465B7560029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
