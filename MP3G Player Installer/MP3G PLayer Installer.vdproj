@@ -15,26 +15,32 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_22070FA0B550D8A64D9ADC150D420E31"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_22070FA0B550D8A64D9ADC150D420E31"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_415066D7FEDD9EFF3864B08596162316"
+        "OwnerKey" = "8:_CD7E7B54DAA6DC8E3F4ECFE0A91CDCA7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
-        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
-        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,13 +70,13 @@
         "Entry"
         {
         "MsmKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
-        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
-        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "OwnerKey" = "8:_9CA54FF084ED4E928B7DEC0CFBC3ADD4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,20 +93,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_CD7E7B54DAA6DC8E3F4ECFE0A91CDCA7"
         "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,13 +106,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_54805A0F1D111B0DF2A9CE8E6558DABE"
+        "OwnerKey" = "8:_CD7E7B54DAA6DC8E3F4ECFE0A91CDCA7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9A54FBF88E09416F155A9852276CB4E2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6F90881564628FD74EF66BBF9899F217"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3012C3CF1B38485C82F4CB2EFABB781F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_22070FA0B550D8A64D9ADC150D420E31"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_98A5CF5CCAA24E2E5B508D7A6DA5E43A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -226,34 +244,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
-            {
-            "SourcePath" = "8:..\\resources\\karaoke.ico"
-            "TargetName" = "8:karaoke.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_54805A0F1D111B0DF2A9CE8E6558DABE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_22070FA0B550D8A64D9ADC150D420E31"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_54805A0F1D111B0DF2A9CE8E6558DABE"
+                    "_22070FA0B550D8A64D9ADC150D420E31"
                     {
                     "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
@@ -275,6 +273,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_415066D7FEDD9EFF3864B08596162316"
+            {
+            "SourcePath" = "8:qedit.dll"
+            "TargetName" = "8:qedit.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:4"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43AF5BD01B8444E1AAD8F6E00CDCFFE1"
+            {
+            "SourcePath" = "8:..\\resources\\karaoke.ico"
+            "TargetName" = "8:karaoke.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6F90881564628FD74EF66BBF9899F217"
@@ -428,6 +466,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CD7E7B54DAA6DC8E3F4ECFE0A91CDCA7"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.DexterLib, Version=1.0.0.0, Culture=neutral"
+                "ScatterAssemblies"
+                {
+                    "_CD7E7B54DAA6DC8E3F4ECFE0A91CDCA7"
+                    {
+                    "Name" = "8:Interop.DexterLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Interop.DexterLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A5BFFD4ADD3948AF8A44EFB83CE71E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }

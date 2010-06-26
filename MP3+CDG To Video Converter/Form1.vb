@@ -23,6 +23,10 @@ Public Class Form1
     SelectOutputAVI()
   End Sub
 
+  Private Sub btBackGroundBrowse_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btBackGroundBrowse.Click
+    SelectBackGroundAVI()
+  End Sub
+
   Private Sub btConvert_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btConvert.Click
     ConvertAVI()
   End Sub
@@ -40,6 +44,24 @@ Public Class Form1
     OpenFileDialog1.Filter = "CDG or Zip Files (*.zip, *.cdg)|*.zip;*.cdg"
     OpenFileDialog1.ShowDialog()
     tbFileName.Text = OpenFileDialog1.FileName
+  End Sub
+
+  Private Sub chkBackGraph_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkBackGraph.CheckedChanged
+    If chkBackGround.Checked AndAlso chkBackGraph.Checked Then
+      chkBackGround.Checked = False
+    End If
+    ToggleCheckBox()
+  End Sub
+
+  Private Sub chkBackGround_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkBackGround.CheckedChanged
+    If chkBackGraph.Checked AndAlso chkBackGround.Checked Then
+      chkBackGraph.Checked = False
+    End If
+    ToggleCheckBox()
+  End Sub
+
+  Private Sub btBrowseImg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btBrowseImg.Click
+    SelectBackGroundGraphic()
   End Sub
 
 #End Region
@@ -60,6 +82,18 @@ Public Class Form1
     tbAVIFile.Text = SaveFileDialog1.FileName
   End Sub
 
+  Private Sub SelectBackGroundAVI()
+    OpenFileDialog1.Filter = "Movie Files (*.avi, *.mpg, *.wmv)|*.avi;*.mpg;*.wmv"
+    OpenFileDialog1.ShowDialog()
+    tbBackGroundAVI.Text = OpenFileDialog1.FileName
+  End Sub
+
+  Private Sub SelectBackGroundGraphic()
+    OpenFileDialog1.Filter = "Graphic Files|*.jpg;*.bmp;*.png;*.tif;*.tiff;*.gif;*.wmf"
+    OpenFileDialog1.ShowDialog()
+    tbBackGroundImg.Text = OpenFileDialog1.FileName
+  End Sub
+
   Private Sub ConvertAVI()
     Try
       PreProcessFiles()
@@ -72,7 +106,10 @@ Public Class Form1
     End Try
     mExportAVI = New ExportAVI
     pbAVI.Value = 0
-    mExportAVI.CDGtoAVI(tbAVIFile.Text, mCDGFileName, mMP3FileName, tbFPS.Text)
+    Dim backGroundFilename As String = ""
+    If chkBackGraph.Checked Then backGroundFilename = tbBackGroundImg.Text
+    If chkBackGround.Checked Then backGroundFilename = tbBackGroundAVI.Text
+    mExportAVI.CDGtoAVI(tbAVIFile.Text, mCDGFileName, mMP3FileName, tbFPS.Text, backGroundFilename)
     pbAVI.Value = 0
     Try
       CleanUp()
@@ -109,6 +146,14 @@ PairUpFiles:
         mTempDir = ""
       End If
     End If
+  End Sub
+
+
+  Private Sub ToggleCheckBox()
+    tbBackGroundAVI.Enabled = chkBackGround.Checked
+    btBackGroundBrowse.Enabled = chkBackGround.Checked
+    tbBackGroundImg.Enabled = chkBackGraph.Checked
+    btBrowseImg.Enabled = chkBackGraph.Checked
   End Sub
 
 #End Region

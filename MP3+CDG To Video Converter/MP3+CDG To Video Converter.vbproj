@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="AviFile, Version=1.0.3823.11378, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
+    <Reference Include="Interop.DexterLib, Version=1.0.0.0, Culture=neutral" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -65,6 +66,7 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MovieFrameExtractor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,6 +111,7 @@
     <Content Include="karaoke.ico" />
     <Content Include="lib\AviFile.dll" />
     <Content Include="lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="lib\Interop.DexterLib.dll" />
     <Content Include="lib\mencoder.exe" />
     <Content Include="resources\karaoke.ico" />
     <Content Include="resources\rsfire.ico" />
